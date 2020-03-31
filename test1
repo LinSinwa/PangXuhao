@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("F:\\Users\\test.xlsx")
+print(df)
+print(df["money1"])
+
+plt.plot(df["time"],df["money1"],label='money1',linewidth=3,color='r',marker='o',
+markerfacecolor='blue',markersize=12)
+plt.plot(df["time"],df["money2"],label='money2',linewidth=3,color='y',marker='o',
+markerfacecolor='blue',markersize=12)
+plt.xlabel("time")
+plt.ylabel('money')
+plt.title("summy of input")
+plt.legend()
+plt.grid()
+plt.show()
